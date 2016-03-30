@@ -1,0 +1,227 @@
+<template name="modal1">
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <div class="row">
+                <div class="col s12">
+                    <div class="col s12">
+                        <div class="col s12">
+                            <img src="s.png" alt="" class="tablSize responsive-img"></div>
+                    </div>
+
+                    <img src="closed1.png" class="close" alt="">
+                    {{#each modalNewCollections}}
+                    <!-- <h3 class="center-align">{{modalHelper.tovarHeader}}</h3>
+                -->
+                <div class="row">
+                    <div class="col s6">
+                        <div class="mainImgModal">
+                            <img src="{{imgSrc}}" class="responsive-img" alt="" id="mainImg"></div>
+                        {{#if smallImg1}}
+                        <div class="modalPhoto col s3" id="modalPhoto1">
+                            <img src="{{smallImg1}}" class="responsive-img" alt="">
+                            </div>
+                        {{/if}}
+                                {{#if smallImg2}}
+                        <div class="modalPhoto col s3" id="modalPhoto2">
+                            <img src="{{smallImg2}}" class="responsive-img" alt=""></div>
+                        {{/if}}
+                              {{#if smallImg3}}
+                        <div class="modalPhoto col s3" id="modalPhoto3">
+                            <img src="{{smallImg3}}" class="responsive-img" alt=""></div>
+                        {{/if}}
+                              {{#if smallImg4}}
+                        <div class="modalPhoto col s3" id="modalPhoto3">
+                            <img src="{{smallImg4}}" class="responsive-img" alt=""></div>
+                        {{/if}}
+                     
+
+                </div>
+                <form class="col s6">
+                    <div class="row">
+
+                        <div class="col s12">
+                            <h4 class="ModalTovarHeader">{{tovarHeader}}</h4>
+                            {{#if firma}}
+                            <p class="modalFirma">от {{firma}}</p>
+                            {{/if}}
+                        </div>
+                        <div class="col s12 modalBorder">
+                            <p class="modalPrice">
+                                <span class="mPirce" id="mPrice">{{price}}</span>
+                                <span class="mAkcii" id="mAkcii">{{akcii}}</span>
+                            </p>
+                            <p>Выберите размер (Size), а затем цвет (Color)</p>
+                        </div>
+                        <div class="col s12">
+                        {{#if color1}}
+                            <div>Цвет:</div>
+                            {{/if}}
+                            <ul class="ulColor">
+                                {{#if color1}}
+                                    <li class="colorPhoto">
+                                    <img src="{{color1}}" class="" width="28" height="28"  alt=""></li>
+                                {{/if}}
+                                {{#if color2}}
+                                    <li class="colorPhoto">
+                                    <img src="{{color2}}" class="" width="28" height="28"  alt=""></li>
+                                {{/if}}
+                                {{#if color3}}
+                                    <li class="colorPhoto">
+                                    <img src="{{color3}}" class="" width="28" height="28"  alt=""></li>
+                                {{/if}}
+                                {{#if color4}}
+                                    <li class="colorPhoto">
+                                    <img src="{{color4}}" class="" width="28" height="28"  alt=""></li>
+                                {{/if}}
+                                {{#if color5}}
+                                    <li class="colorPhoto">
+                                    <img src="{{color5}}" class="" width="28" height="28"  alt=""></li>
+                                {{/if}}
+                                {{#if color6}}
+                                    <li class="colorPhoto">
+                                    <img src="{{color6}}" class="" width="28" height="28"  alt=""></li>
+                                {{/if}}
+                                {{#if color7}}
+                                    <li class="colorPhoto">
+                                    <img src="{{color7}}" class="" width="28" height="28"  alt=""></li>
+                                {{/if}}
+                                {{#if color8}}
+                                    <li class="colorPhoto">
+                                    <img src="{{color8}}" class="" width="28" height="28"  alt=""></li>
+                                {{/if}}
+                                {{#if color9}}
+                                    <li class="colorPhoto">
+                                    <img src="{{color9}}" class="" width="28" height="28"  alt=""></li>
+                                {{/if}}
+                                {{#if color10}}
+                                    <li class="colorPhoto">
+                                    <img src="{{color10}}" class="" width="28" height="28"  alt=""></li>
+                                {{/if}}
+                            </ul>
+                        </div>
+                        <div class="col s4">
+                            <label>Бюст</label>
+                            <select class="browser-default selectSizeByst">
+                                {{#if sByst}}
+                                <option value="{{s}}">{{sByst}}</option>
+                                {{/if}}
+                                    {{#if mByst}}
+                                <option value="{{m}}">{{mByst}}</option>
+                                {{/if}}
+                                    {{#if lByst}}
+                                <option value="{{l}}">{{lByst}}</option>
+                                {{/if}}
+                                    {{#if xlByst}}
+                                <option value="{{xl}}">{{xlByst}}</option>
+                                {{/if}}
+                            </select>
+                        </div>
+                        <div class="col s4">
+                            <label>Трусы</label>
+                            <select class="browser-default selectSizeTrysu">
+                                {{#if sTrysu}}
+                                <option value="{{s}}">{{sTrysu}}</option>
+                                {{/if}}
+                                    {{#if mTrysu}}
+                                <option value="{{m}}">{{mTrysu}}</option>
+                                {{/if}}
+                                    {{#if lTrysu}}
+                                <option value="{{l}}">{{lTrysu}}</option>
+                                {{/if}}
+                                    {{#if xlTrysu}}
+                                <option value="{{xl}}">{{xlTrysu}}</option>
+                                {{/if}}
+                            </select>
+                        </div>
+                        <div class="col s4">
+                            <label>Количество</label>
+                            <select class="browser-default quantity">
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5</option>
+                              <option value="6">6</option>
+                              <option value="7">7</option>
+                              <option value="8">8</option>
+                              <option value="9">9</option>
+                              <option value="10">10</option>
+                              <option value="11">11</option>
+                              <option value="12">12</option>
+                              <option value="13">13</option>
+                              <option value="14">14</option>
+                              <option value="15">15</option>
+                              <option value="16">16</option>
+                              <option value="17">17</option>
+                              <option value="18">18</option>
+                              <option value="19">19</option>
+                              <option value="20">20</option>
+                            </select>
+                        </div>
+                    <div class="col s12">
+                    <section class="ac-container">
+
+                        <div>
+                            <input id="ac-2" name="accordion-1" type="checkbox" />
+
+                            <label for="ac-2">
+                                Характеристики
+                                <img src="arDown.png" class="arDown" alt=""></label>
+                            <article class="ac-medium">
+                                {{#if har1}}
+                                <p>{{har1}}</p>
+                                {{/if}}
+                                            {{#if har2}}
+                                <p>{{har2}}</p>
+                                {{/if}}
+                                            {{#if har3}}
+                                <p>{{har3}}</p>
+                                {{/if}}
+                                            {{#if har4}}
+                                <p>{{har4}}</p>
+                                {{/if}}
+                                            {{#if har5}}
+                                <p>{{har5}}</p>
+                                {{/if}}
+                                            {{#if har6}}
+                                <p>{{har6}}</p>
+                                {{/if}}
+                                            {{#if har7}}
+                                <p>{{har7}}</p>
+                                {{/if}}
+                                            {{#if har8}}
+                                <p>{{har8}}</p>
+                                {{/if}}
+                            </article>
+                        </div>
+                        {{#if tableSize}}
+                        <p id="tableSize" name="{{tableSize}}">Смотерть таблицу размеров</p>
+                        {{/if}}
+                    </section>
+                </div>
+
+                <div class="input-field col s12">
+                    <input id="name" type="text" class="validate">
+                    <label for="name">Ваше имя</label>
+                </div>
+                <div class="input-field col s12">
+                    <input id="namber" type="text" class="validate">
+                    <label for="namber">Ваш номер</label>
+                </div>
+
+                <div class="col s12">
+                    <div class="modalButt">
+                        <span class="send">Отправить</span>
+                    </div>
+                </div>
+
+            </div>
+        </form>
+
+    </div>
+    {{/each}}
+</div>
+</div>
+</div>
+</div>
+</template>
